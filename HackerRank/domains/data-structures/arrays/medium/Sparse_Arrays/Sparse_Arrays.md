@@ -15,12 +15,12 @@ Complete the function matchingStrings in the editor below. The function must ret
 
 matchingStrings has the following parameters:
 
--string strings[n] - an array of strings to search
--string queries[q] - an array of query strings
+- string strings[n] - an array of strings to search
+- string queries[q] - an array of query strings
 
 ##Returns
 
--int[q]: an array of results for each query
+- int[q]: an array of results for each query
 
 ## Input Format
 
@@ -29,7 +29,7 @@ Each of the next ***n***lines contains a string ***strings[i]***.
 The next line contains ***q***, the size of ***queries[]***.
 Each of the next ***q***lines contains a string ***queries[i]***.
 
-## Constraints ≤ ≥
+## Constraints
 
 ***1 ≤ n ≤ 1000***
 ***1 ≤ q ≤ 1000***
