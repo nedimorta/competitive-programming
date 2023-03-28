@@ -30,10 +30,10 @@ The second line contains ***n*** space-separated integers of the array ***arr***
 
 ## Constraints
 
-- *** 2 ≤ n ≤ 10^5***
-- *** 0 < k < 10^9***
-- *** 0 < arr[i] < (2^31) - 1***
-- each integer ***arr[i]*** will be unique
+*** 2 ≤ n ≤ 10^5***,
+*** 0 < k < 10^9***,
+*** 0 < arr[i] < (2^31) - 1***,
+Each integer ***arr[i]*** will be unique
 
 ## Sample Input
 
