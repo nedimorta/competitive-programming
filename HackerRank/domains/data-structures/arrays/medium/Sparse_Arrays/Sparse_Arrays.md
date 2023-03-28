@@ -4,7 +4,7 @@ There is a collection of input strings and a collection of query strings. For ea
 
 ## Example
 
-***strings = ['ab', 'ab', 'abc']***
+***strings = ['ab', 'ab', 'abc']***\
 ***queries = ['ab'. 'abc', 'bc']***
 
 There are **2** instances of ***'ab'***, **1** of ***'abc'*** and **0** of ***'bc'***. For each query, add an element to the return array, ***results = [2,1,0]***.
@@ -31,26 +31,26 @@ Each of the next ***q***lines contains a string ***queries[i]***.
 
 ## Constraints
 
-***1 ≤ n ≤ 1000***
-***1 ≤ q ≤ 1000***
+***1 ≤ n ≤ 1000***\
+***1 ≤ q ≤ 1000***\
 ***1 ≤ |strings[i]|, |queries[i]| ≤ 20***.
 
 ## Sample Input
 
-`4`
-`aba`
-`baba`
-`aba`
-`xzxb`
-`3`
-`aba`
-`xzxb`
+`4`\
+`aba`\
+`baba`\
+`aba`\
+`xzxb`\
+`3`\
+`aba`\
+`xzxb`\
 `ab`
 
 ## Sample Output
 
-`2`
-`1`
+`2`\
+`1`\
 `0`
 
 ## Explanation
