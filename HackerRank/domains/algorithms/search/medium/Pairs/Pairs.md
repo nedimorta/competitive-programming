@@ -4,7 +4,7 @@ Given an array of integers and a target value, determine the number of pairs of 
 
 ## Example
 
-***k = 1***
+***k = 1***\
 ***arr = [1,2,3,4]***
 
 There are three values that differ by ***k*** **= 1 : 2 - 1 = 1, 3 - 2 = 1**, and **4 - 3 = 1**. Return **3**.
@@ -30,14 +30,14 @@ The second line contains ***n*** space-separated integers of the array ***arr***
 
 ## Constraints
 
-*** 2 ≤ n ≤ 10^5***,
-*** 0 < k < 10^9***,
-*** 0 < arr[i] < (2^31) - 1***,
+*** 2 ≤ n ≤ 10^5 ***\
+*** 0 < k < 10^9 ***\
+*** 0 < arr[i] < (2^31) - 1 ***\
 Each integer ***arr[i]*** will be unique
 
 ## Sample Input
 
-`5 2`
+`5 2`\
 `1 5 3 4 2`
 
 ## Sample Output
