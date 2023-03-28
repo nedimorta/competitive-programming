@@ -18,7 +18,7 @@ matchingStrings has the following parameters:
 - string strings[n] - an array of strings to search
 - string queries[q] - an array of query strings
 
-##Returns
+## Returns
 
 - int[q]: an array of results for each query
 
