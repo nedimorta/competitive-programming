@@ -20,7 +20,7 @@ This repository contains solutions to various competitive programming problems f
 - [Strings](https://github.com/nedimorta/competitive-programming/tree/main/HackerRank/domains/algorithms/strings)
 - [Warmup](https://github.com/nedimorta/competitive-programming/tree/main/HackerRank/domains/algorithms/warmup)
 
-### Data Structures
+### [Data Structures](https://github.com/nedimorta/competitive-programming/tree/main/HackerRank/domains/data-structures)
 
 - [Advanced](https://github.com/nedimorta/competitive-programming/tree/main/HackerRank/domains/data-structures/advanced)
 - [Arrays](https://github.com/nedimorta/competitive-programming/tree/main/HackerRank/domains/data-structures/array)
@@ -32,3 +32,6 @@ This repository contains solutions to various competitive programming problems f
 - [Stacks](https://github.com/nedimorta/competitive-programming/tree/main/HackerRank/domains/data-structures/stacks)
 - [Trees](https://github.com/nedimorta/competitive-programming/tree/main/HackerRank/domains/data-structures/trees)
 - [Trie](https://github.com/nedimorta/competitive-programming/tree/main/HackerRank/domains/data-structures/trie)
+
+
+## [LeetCode](https://github.com/nedimorta/competitive-programming/tree/main/LeetCode)
