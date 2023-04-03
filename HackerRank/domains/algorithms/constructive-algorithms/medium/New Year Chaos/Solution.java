@@ -1,6 +1,13 @@
 import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
 import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
 import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 class Result {
@@ -12,32 +19,23 @@ class Result {
      */
 
     public static void minimumBribes(List<Integer> q) {
-    int result = 0;
+        int result = 0;
 
-    for (int i = q.size() - 2; i >= 0; i--) {
-        int localCount = 0;
-        int j = i;
+        for (int i = q.size() - 1; i >= 0; i--) {
+            if (q.get(i) - (i + 1) > 2) {
+                System.out.println("Too chaotic");
+                return;
+            }
 
-        while (j < q.size() - 1 && q.get(j) > q.get(j + 1)) {
-            int temp = q.get(j + 1);
-            q.set(j + 1, q.get(j));
-            q.set(j, temp);
-            localCount++;
-            j++;
+            for (int j = Math.max(0, q.get(i) - 2); j < i; j++) {
+                if (q.get(j) > q.get(i)) {
+                    result++;
+                }
+            }
         }
 
-        if (localCount > 2) {
-            System.out.println("Too chaotic");
-            return;
-        } else {
-            result += localCount;
-        }
+        System.out.println(result);
     }
-
-    System.out.println(result);
-
-    }
-
 }
 
 public class Solution {
