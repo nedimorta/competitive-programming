@@ -1,4 +1,8 @@
+import java.io.*;
 import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
 public class Solution {
     public static class Graph {
@@ -14,9 +18,9 @@ public class Solution {
             }
         }
 
-        private void addEdge(int vertex1, int vertex2) {
-            graph.get(vertex1).add(vertex2);
-            graph.get(vertex2).add(vertex1);
+        public void addEdge(int first, int second) {
+            graph.get(first).add(second);
+            graph.get(second).add(first);
         }
 
         private LinkedList<Integer> getAdjacency(int vertex){

@@ -24,9 +24,9 @@ Each of the following ***q*** sets of lines is as follows:
 
 ## Constraints
 
-***1 ≤ q ≤ 10***
-***2 ≤ n ≤ 1000***
-***1 ≤ m ≤ (n.(n-1))/2***
+***1 ≤ q ≤ 10***\
+***2 ≤ n ≤ 1000***\
+***1 ≤ m ≤ (n.(n-1))/2***\
 ***1 ≤ u, v, s ≤ n***
 
 ## Output Format
@@ -35,18 +35,18 @@ For each of the ***q*** queries, print a single line of ***n-1*** space-separate
 
 ## Sample Input
 
-`2`
-`4 2`
-`1 2`
-`1 3`
-`1`
-`3 1`
-`2 3`
+`2`\
+`4 2`\
+`1 2`\
+`1 3`\
+`1`\
+`3 1`\
+`2 3`\
 `2`
 
 ## Sample Output
 
-`6 6 -1`
+`6 6 -1`\
 `-1 6`
 
 ## Explanation
