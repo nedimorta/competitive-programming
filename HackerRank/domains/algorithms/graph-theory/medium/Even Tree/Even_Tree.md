@@ -29,7 +29,7 @@ The next **t_edges** lines contain two integers **t_from[i]** and **t_to[i]** wh
 
 ***2 ≤ t_nodes ≤ 100***\
 ***1 ≤ t_edges ≤ t_nodes - 1***\
-***1 ≤ t_from[i] < t_to[i] ≤ t_nodes***\
+***1 ≤ t_from[i] < t_to[i] ≤ t_nodes***
 
 Note: The tree in the input will be such that it can always be decomposed into components containing an even number of nodes.
 

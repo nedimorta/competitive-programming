@@ -62,7 +62,7 @@ For **100%** score **1 ≤ n ≤ 10^5**
 
 ### Test Case 1
 
-The initial state:\
+The initial state:
 
 ![image](https://s3.amazonaws.com/hr-challenge-images/494/1451665589-31d436ba19-pic11.png)
 
