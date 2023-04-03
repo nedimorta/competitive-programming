@@ -66,15 +66,15 @@ The initial state:\
 
 ![image](https://s3.amazonaws.com/hr-challenge-images/494/1451665589-31d436ba19-pic11.png)
 
-After person **5** moves one position ahead by bribing person **4**:\
+After person **5** moves one position ahead by bribing person **4**:
 
 ![image](https://s3.amazonaws.com/hr-challenge-images/494/1451665679-6504422ed9-pic2.png)
 
-Now person **5** moves another position ahead by bribing person **3**:\
+Now person **5** moves another position ahead by bribing person **3**:
 
 ![image](https://s3.amazonaws.com/hr-challenge-images/494/1451665818-27bd62bb0d-pic3.png)
 
-And person **2** moves one position ahead by bribing person **1**:\
+And person **2** moves one position ahead by bribing person **1**:
 
 ![image](https://s3.amazonaws.com/hr-challenge-images/494/1451666025-02a2395a00-pic5.png)
 
