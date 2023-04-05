@@ -1,5 +1,10 @@
 import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
 import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
 
 public class Solution {
 
@@ -47,61 +52,21 @@ public class Solution {
         }
     }
 
-    // Complete the hasCycle function below.
+    static boolean hasCycle(SinglyLinkedListNode head) {
+        SinglyLinkedListNode slowNode = head;
+        SinglyLinkedListNode fastNode = head;
 
-    /*
-     * For your reference:
-     *
-     * SinglyLinkedListNode {
-     *     int data;
-     *     SinglyLinkedListNode next;
-     * }
-     *
-     */
+        while (fastNode != null && fastNode.next != null) {
+            slowNode = slowNode.next;
+            fastNode = fastNode.next.next;
 
-     /*"Tortoise and hare" algorithm is used to detect whether a linked list has a cycle. 
-     The algorithm works by moving a slow pointer one node at a time and a fast pointer two nodes at a time. 
-     If the fast pointer ever catches up to the slow pointer, then it means that the linked list has a cycle.*/
-    static boolean hasCycle(SinglyLinkedListNode head) 
-{
-    SinglyLinkedListNode slowNode = head;
-    SinglyLinkedListNode fastNode = head;
-
-    while (slowNode != null)
-    {
-        if (fastNode.next != null)
-        {
-            fastNode = fastNode.next;
-
-            if (fastNode == slowNode)
-            {
+            if (slowNode == fastNode) {
                 return true;
             }
         }
-        else
-        {
-            return false;
-        }
 
-        if (fastNode.next != null)
-        {
-            fastNode = fastNode.next;
-
-            if (fastNode == slowNode)
-            {
-                return true;
-            }
-        }
-        else
-        {
-            return false;
-        }
-
-        slowNode = slowNode.next;
+        return false;
     }
-
-    return false;
-}
 
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -127,7 +92,7 @@ public class Solution {
                 llist.insertNode(llistItem);
             }
           
-          	SinglyLinkedListNode extra = new SinglyLinkedListNode(-1);
+            SinglyLinkedListNode extra = new SinglyLinkedListNode(-1);
             SinglyLinkedListNode temp = llist.head;
 
             for (int i = 0; i < llistCount; i++) {
@@ -140,7 +105,7 @@ public class Solution {
                 }
             }
       
-      		temp.next = extra;
+            temp.next = extra;
 
             boolean result = hasCycle(llist.head);
 
