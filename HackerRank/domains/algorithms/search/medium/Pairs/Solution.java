@@ -2,47 +2,50 @@ package HackerRank.domains.algorithms.search.medium.Pairs;
 
 import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    public static int pairs(int k, List<Integer> arr) {
+        int result = 0;
+        Collections.sort(arr);
+
+        for (int i = 0; i < arr.size(); i++) {
+            int number = arr.get(i);
+            if (Collections.binarySearch(arr, number - k) > -1) {
+                result++;
+            }
+        }
+
+        return result;
+    }
+
+}
 
 public class Solution {
-    static int pairs(int[] a,int k) {
-      int result = 0;
-      Arrays.sort(a);
-      
-      for(int number : a){
-          if(Arrays.binarySearch(a, number - k) > -1){
-              result++;
-          }
-      }
-      
-      
-      return result;
-    }
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int res;
-        
-        String n = in.nextLine();
-        String[] n_split = n.split(" ");
-        
-        int _a_size = Integer.parseInt(n_split[0]);
-        int _k = Integer.parseInt(n_split[1]);
-        
-        int[] _a = new int[_a_size];
-        int _a_item;
-        String next = in.nextLine();
-        String[] next_split = next.split(" ");
-        
-        for(int _a_i = 0; _a_i < _a_size; _a_i++) {
-            _a_item = Integer.parseInt(next_split[_a_i]);
-            _a[_a_i] = _a_item;
-        }
-        
-        res = pairs(_a,_k);
-        System.out.println(res);
+        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+
+        int n = Integer.parseInt(firstMultipleInput[0]);
+
+        int k = Integer.parseInt(firstMultipleInput[1]);
+
+        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+            .map(Integer::parseInt)
+            .collect(toList());
+
+        int result = Result.pairs(k, arr);
+
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
     }
 }
+
 
