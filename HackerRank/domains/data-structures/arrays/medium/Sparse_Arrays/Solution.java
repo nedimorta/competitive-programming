@@ -1,29 +1,35 @@
 import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
 import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
 import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 class Result {
 
-    public static List<Integer> matchingStrings(List<String> strings, List<String> queries) {
-    HashMap<String, Integer> solMap = new HashMap<>();
+    public static List<Integer> matchingStrings(List<String> stringList, List<String> queries) {
+        HashMap<String, Integer> solMap = new HashMap<>();
 
-        for(int i=0; i<strings.size(); i++){
-            if(solMap.containsKey(strings.get(i))){
-                solMap.put(strings.get(i), solMap.get(strings.get(i))+1);
-            }else
-                solMap.put(strings.get(i), 1);
+        for (int i = 0; i < stringList.size(); i++) {
+            if (solMap.containsKey(stringList.get(i))) {
+                solMap.put(stringList.get(i), solMap.get(stringList.get(i)) + 1);
+            } else {
+                solMap.put(stringList.get(i), 1);
+            }
         }
 
         ArrayList<Integer> resultArray = new ArrayList<>();
 
-        for(int i=0; i<queries.size(); i++){
-            resultArray.add(solMap.getOrDefault(queries.get(i),0));
+        for (int i = 0; i < queries.size(); i++) {
+            resultArray.add(solMap.getOrDefault(queries.get(i), 0));
         }
 
         return resultArray;
-
     }
 
 }
@@ -33,9 +39,9 @@ public class Solution {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        int stringsCount = Integer.parseInt(bufferedReader.readLine().trim());
+        int stringListCount = Integer.parseInt(bufferedReader.readLine().trim());
 
-        List<String> strings = IntStream.range(0, stringsCount).mapToObj(i -> {
+        List<String> stringList = IntStream.range(0, stringListCount).mapToObj(i -> {
             try {
                 return bufferedReader.readLine();
             } catch (IOException ex) {
@@ -55,7 +61,7 @@ public class Solution {
         })
             .collect(toList());
 
-        List<Integer> res = Result.matchingStrings(strings, queries);
+        List<Integer> res = Result.matchingStrings(stringList, queries);
 
         bufferedWriter.write(
             res.stream()
