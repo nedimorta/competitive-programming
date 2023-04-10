@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 
 class Node {
     Node left;
@@ -14,40 +15,31 @@ class Node {
 
 class Solution {
 
-	/* 
-    
+    /* 
     class Node 
-    	int data;
-    	Node left;
-    	Node right;
-	*/
-    
-    
-    
-	public static void levelOrder(Node root) {
-        ArrayList<Node> nodes = new ArrayList<Node>();
-        nodes.add(root);
-        levelOrderHelper(nodes);
-    }
-    
-    static void levelOrderHelper(ArrayList<Node> nodes) {
-        if (!nodes.isEmpty()){
-            ArrayList<Node> newNodes = new ArrayList<Node>();
-            for (Node node : nodes) {
-                System.out.print(node.data + " ");
-                
-                if (node.left != null) {
-                    newNodes.add(node.left);
-                }
-                if(node.right != null){
-                    newNodes.add(node.right);
-                }
+        int data;
+        Node left;
+        Node right;
+    */
+    public static void levelOrder(Node root) {
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        
+        while (!queue.isEmpty()) {
+            Node currentNode = queue.poll();
+            System.out.print(currentNode.data + " ");
+            
+            if (currentNode.left != null) {
+                queue.add(currentNode.left);
             }
-            levelOrderHelper(newNodes);
+            
+            if (currentNode.right != null) {
+                queue.add(currentNode.right);
+            }
         }
     }
 
-	public static Node insert(Node root, int data) {
+    public static Node insert(Node root, int data) {
         if(root == null) {
             return new Node(data);
         } else {
@@ -73,5 +65,5 @@ class Solution {
         }
         scan.close();
         levelOrder(root);
-    }	
+    }   
 }
