@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 
 class Node {
     Node left;
@@ -14,57 +15,22 @@ class Node {
 
 class Solution {
 
-	/*
+    /*
     class Node 
-    	int data;
-    	Node left;
-    	Node right;
-	*/
-	public static int height(Node root) {
-      	int maxVal = 0;
-        
-        if (root.right != null){
-            int val = 1 + heightHelper(root.right);
-            
-            if (val > maxVal){
-                maxVal = val;
-            }
+        int data;
+        Node left;
+        Node right;
+    */
+    public static int height(Node root) {
+        if (root == null) {
+            return -1;
         }
-        
-        if (root.left != null){
-            int val = 1 + heightHelper(root.left);
-            
-            if (val > maxVal){
-                maxVal = val;
-            }
-        }
-        
-        return maxVal;
-    }
-    
-    private static int heightHelper(Node node){
-        int maxVal = 0;
-        
-        if (node.right != null){
-            int val = 1 + heightHelper(node.right);
-            
-            if (val > maxVal){
-                maxVal = val;
-            }
-        }
-        
-        if (node.left != null){
-            int val = 1 + heightHelper(node.left);
-            
-            if (val > maxVal){
-                maxVal = val;
-            }
-        }
-        
-        return maxVal;
+        int leftHeight = height(root.left);
+        int rightHeight = height(root.right);
+        return Math.max(leftHeight, rightHeight) + 1;
     }
 
-	public static Node insert(Node root, int data) {
+    public static Node insert(Node root, int data) {
         if(root == null) {
             return new Node(data);
         } else {
@@ -91,5 +57,5 @@ class Solution {
         scan.close();
         int height = height(root);
         System.out.println(height);
-    }	
+    }   
 }
