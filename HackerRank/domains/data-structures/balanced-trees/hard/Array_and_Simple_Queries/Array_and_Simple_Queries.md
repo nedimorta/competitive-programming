@@ -46,9 +46,9 @@ Print elements of the resulting array in the second line. Each element should be
 
 ## Explanation
 
-Given array is **{1,2,3,4,5,6,7,8}**.
-After execution of query **1 2 4**, the array becomes **{2, 3, 4, 1, 5, 6, 7, 8}**.
-After execution of query **2 3 5**, the array becomes **{2, 3, 6, 7, 8, 4, 1, 5}**.
-After execution of query **1 4 7**, the array becomes **{7, 8, 4, 1, 2, 3, 6, 5}**.
-After execution of query **2 1 4**, the array becomes **{2, 3, 6, 5, 7, 8, 4, 1}**.
+Given array is **{1,2,3,4,5,6,7,8}**.\
+After execution of query **1 2 4**, the array becomes **{2, 3, 4, 1, 5, 6, 7, 8}**.\
+After execution of query **2 3 5**, the array becomes **{2, 3, 6, 7, 8, 4, 1, 5}**.\
+After execution of query **1 4 7**, the array becomes **{7, 8, 4, 1, 2, 3, 6, 5}**.\
+After execution of query **2 1 4**, the array becomes **{2, 3, 6, 5, 7, 8, 4, 1}**.\
 Now **|A[1] - A[N]|** is **|(2 - 1)|** i.e. **1** and array is **23657841**.
