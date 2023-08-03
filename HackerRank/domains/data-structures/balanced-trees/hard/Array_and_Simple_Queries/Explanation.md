@@ -2,6 +2,7 @@
 Given an array of **N** integers and **M** queries, the task is to perform the following two types of queries:
 
 Type 1 queries (**1 i j**): Remove elements from **i** to **j** and add them to the front of the array.
+
 Type 2 queries (**2 i j**): Remove elements from **i** to **j** and add them to the back of the array.
 The goal is to print the absolute difference between the first and last elements of the resulting array after all queries are executed and then print the elements of the resulting array.
 
@@ -22,9 +23,12 @@ The **splitByOrder** method splits a Treap into two parts based on a given order
 
 ## Main Algorithm
 **1. Initialize Treap**: The Treap is initialized with the given array, and each element is added as a node with random priority.
+
 **2. Process Queries**: For each query, the code splits the Treap based on the indices **i** and **j**, obtaining three parts.
+
 - If the query is of type 1, the middle part is added to the front.
 - If the query is of type 2, the middle part is added to the back.
+
 **3. Compute Result**: After executing all queries, the code computes the absolute difference between the first and last elements of the resulting array and prints it along with the elements.
 
 ## Usage
