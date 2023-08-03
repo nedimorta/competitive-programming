@@ -76,8 +76,7 @@ public class Solution {
         node.fixCount();
         return new Node[] { subResult[0], node };
       } else {
-        Node[] subResult = splitByOrder(node.right,
-            order - (node.left != null ? node.left.count : 0) - 1);
+        Node[] subResult = splitByOrder(node.right, order - (node.left != null ? node.left.count : 0) - 1);
         node.right = subResult[0];
         node.fixCount();
         return new Node[] { node, subResult[1] };
@@ -106,8 +105,7 @@ public class Solution {
       Treap.Node[] subResult1 = Treap.splitByOrder(root, from - 1);
       Treap.Node firstPart = subResult1[0];
       Treap.Node temp = subResult1[1];
-      Treap.Node[] subResult2 = Treap.splitByOrder(temp,
-          to - (firstPart != null ? firstPart.count : 0));
+      Treap.Node[] subResult2 = Treap.splitByOrder(temp, to - (firstPart != null ? firstPart.count : 0));
       Treap.Node secondPart = subResult2[0];
       Treap.Node thirdPart = subResult2[1];
       Treap.Node combinedParts = Treap.merge(firstPart, thirdPart);
