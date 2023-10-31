@@ -33,5 +33,3 @@ This repository contains solutions to various competitive programming problems f
 - [Trees](https://github.com/nedimorta/competitive-programming/tree/main/HackerRank/domains/data-structures/trees)
 - [Trie](https://github.com/nedimorta/competitive-programming/tree/main/HackerRank/domains/data-structures/trie)
 
-
-## [LeetCode](https://github.com/nedimorta/competitive-programming/tree/main/LeetCode)
