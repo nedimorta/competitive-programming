@@ -16,11 +16,6 @@ A HashMap (`solMap`) is used to store each unique string from `stringList` as a 
 3. **Returning the Result**:
    - The `matchingStrings` method returns `resultArray`, which contains the frequencies of each query string in the order they appear in `queries`.
 
-## Usage
-1. Compile and run the code with a standard Java environment.
-2. The code reads input from standard input (console) and writes output to a file defined by the `OUTPUT_PATH` environment variable.
-3. Input should follow the specified format: the first part consists of N strings (one per line), followed by M queries.
-
 ## Example
 
 Input:
@@ -33,13 +28,13 @@ Input:
 `3`\
 `aba`\
 `xzxb`\
-`ab`\
+`ab`
 
 Output:
 
 `2`\
 `1`\
-`0`\
+`0`
 
 Explanation:
 - "aba" appears 2 times in the string list.

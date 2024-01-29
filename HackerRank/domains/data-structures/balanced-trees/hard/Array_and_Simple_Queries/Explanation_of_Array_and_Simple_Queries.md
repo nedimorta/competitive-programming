@@ -23,9 +23,6 @@ The **splitByOrder** method splits a Treap into two parts based on a given order
 
 **3. Compute Result**: After executing all queries, the code computes the absolute difference between the first and last elements of the resulting array and prints it along with the elements.
 
-## Usage
-Compile and run the code with any standard Java environment. The input should follow the format specified in the problem definition.
-
 ## Example
 For the given example:
 
@@ -34,12 +31,12 @@ For the given example:
 `1 2 4`\
 `2 3 5`\
 `1 4 7`\
-`2 1 4`\
+`2 1 4`
 
 The output is:
 
 `1`\
-`2 3 6 5 7 8 4 1`\
+`2 3 6 5 7 8 4 1`
 
 ## Conclusion
 This code provides an efficient solution to the problem by using a Treap data structure. It allows for fast manipulation of the array according to the given queries and computes the final result in an elegant manner.
