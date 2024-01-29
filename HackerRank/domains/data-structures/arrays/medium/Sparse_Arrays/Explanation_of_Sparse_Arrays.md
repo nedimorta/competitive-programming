@@ -42,4 +42,4 @@ Explanation:
 - "ab" does not appear in the string list.
 
 ## Conclusion
-This Java code provides a simple yet effective solution for counting occurrences of strings. It demonstrates the efficient use of HashMaps for frequency counting and highlights the importance of choosing the right data structure for optimizing performance in large datasets.
+The code effectively counts string occurrences using HashMaps, showcasing their efficiency in frequency counting. This approach emphasizes the significance of selecting appropriate data structures for performance optimization in extensive datasets.
