@@ -1,11 +1,3 @@
-## Problem Definition
-Given an array of **N** integers and **M** queries, the task is to perform the following two types of queries:
-
-Type 1 queries (**1 i j**): Remove elements from **i** to **j** and add them to the front of the array.
-
-Type 2 queries (**2 i j**): Remove elements from **i** to **j** and add them to the back of the array.
-The goal is to print the absolute difference between the first and last elements of the resulting array after all queries are executed and then print the elements of the resulting array.
-
 # Solution Explanation
 The solution leverages a data structure called a Treap to efficiently perform the operations.
 
